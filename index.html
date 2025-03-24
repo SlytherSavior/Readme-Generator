@@ -11,20 +11,30 @@
 <body>
     <div class="main-container">
         <div class="guidelines">
-            <p></p>
+            <p><b>Here are the guidelines you can follow to fill up this form</b></p>
+            <ul>
+                <li>In Animated Text section, use <b>';'</b> to indicate a line break ( Eg: Hello;World, prints Hello in
+                    first line, World in second )</li>
+                <li>In parts such as About section and project descripton, use <b>**Text here**</b> to make it bold</li>
+                <!-- <li></li>
+                <li></li>
+                <li></li> -->
+            </ul>
         </div>
         <div class="form-container">
             <form action="" class="main-form">
-                <label for="username">Enter your github Username</label>
+                <label for="username">Enter your github <b>Username</b></label>
                 <input type="text" name="username" id="username"><br>
-                <label for="animatedText">Input the text you would like to be animated at the tope of your
-                    Readme</label>
+                <label for="animatedText"><b>Animated Text</b></label>
                 <input type="text" name="animatedText" id="animatedText">
-                <p class="additional-info">If you want to breakline in your <b>animated text</b> add <b>';'</b> between
-                    your
-                    words to indicate a line break</p>
-
-
+                <p><b>About me:</b></p>
+                <label for="education">Education</label>
+                <input type="text" name="education" id="education"><br>
+                <label for="goals">Current Goals</label>
+                <input type="text" name="goals" id="goals"><br>
+                <label for="journey">Tech Journey</label>
+                <input type="text" name="journey" id="journey"><br>
+                
             </form>
         </div>
         <div class="output-container"></div>
