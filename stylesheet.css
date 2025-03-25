@@ -1,0 +1,25 @@
+:root {
+    --bg-color: #1a1a2e;
+    --div-bg: #e6e6e8;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.main-container {
+    background-color: var(--div-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    /* centering a div ig */
+    justify-content: center;
+    border: 2px solid;
+    border-radius: 20px;
+    width: 80%;
+}
