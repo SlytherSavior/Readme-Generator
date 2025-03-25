@@ -33,3 +33,14 @@ const getGitHubStats = (username) => {
     };
 };
 
+function genReadme() {
+    const username = document.getElementById('username').value;
+    const animatedText = document.getElementById('animatedText').value;
+    const education = document.getElementById('education').value;
+    const currGoals = document.getElementById('goals').value;
+    const techJourney = document.getElementById('journey');
+    const techStack = document.getElementById('techStack').value;
+    const projTitle = document.getElementById('projTitle').value;
+
+
+};
