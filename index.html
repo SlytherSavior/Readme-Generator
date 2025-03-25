@@ -10,59 +10,103 @@
 
 <body>
     <div class="main-container">
-        <div class="guidelines">
-            <p><b>Here are the guidelines you can follow to fill up this form</b></p>
+        <section class="guidelines" aria-labelledby="guidelines-title">
+            <h1 id="guidelines-title" class="strong">📝 Guidelines for filling the form</h1>
             <ul>
-                <li>In Animated Text section, use <b>';'</b> to indicate a line break ( Eg: Hello;World, prints Hello in
+                <li>In Animated Text section, use <strong>';'</strong> to indicate a line break ( Eg: Hello;World,
+                    prints Hello in
                     first line, World in second )</li>
-                <li>In parts such as About section and project descripton, use <b>**Text here**</b> to make it bold</li>
-                <li>For <b>Your tech stack</b> use <b>','</b> to separate names, and write correct names in
-                    <b>lowercase</b>. (Example: tailwind,js,python,java,electron)
+                <li>In parts such as About section and project descripton, use <strong>**Text here**</strong> to make it
+                    bold</li>
+                <li>For <strong>Your tech stack</strong> use <strong>','</strong> to separate names, and write correct
+                    names in
+                    <strong>lowercase</strong>. (Example: tailwind,js,python,java,electron)
                 </li>
-                <li>PS: There is no input validation (yet) so, do not mess it up 💀💀</li>
+                <li>⚠️ PS: There is no input validation (yet) so, do not mess it up 💀💀</li>
             </ul>
-        </div>
-        <div class="form-container">
-            <label for="username">Enter your github <b>Username</b></label>
-            <input type="text" name="username" id="username"><br>
-            <label for="animatedText"><b>Animated Text</b></label>
-            <input type="text" name="animatedText" id="animatedText">
-            <div class="about-me">
-                <p><b>About me:</b></p>
-                <label for="education">Education</label>
-                <input type="text" name="education" id="education"><br>
-                <label for="goals">Current Goals</label>
-                <input type="text" name="goals" id="goals"><br>
-                <label for="journey">Tech Journey</label>
-                <input type="text" name="journey" id="journey"><br>
-            </div>
-            <label for="techStack">Your tech stack</label>
-            <input type="text" name="techStack" id="techStack" placeholder="react,svelte,nextjs,androidstudio">
-            <div class="project">
-                <p><b>Enter details about a project below</b></p>
-                <label for="projTitle">Project Title</label>
-                <input type="text" name="projTitle" id="projTitle"><br>
-                <label for="projStack">Tech Stack</label>
-                <input type="text" name="projStack" id="projStack"><br>
-                <label for="projDescription">Project Description</label>
-                <input type="text" name="projDescription" id="projDescription"
-                    placeholder="Use ** ** to bold certain parts of text"><br>
-                <label for="projLink">Project Link</label>
-                <input type="text" name="projLink" id="projLink" placeholder="GitHub URL"><br>
+        </section>
 
-                <p><b>Social Links</b></p>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="your@email.com"><br>
-                <label for="website">Personal Website</label>
-                <input type="url" name="website" id="website" placeholder="https://yourwebsite.com"><br>
-                <label for="linkedin">LinkedIn URL</label>
-                <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/username"><br>
-                <label for="twitter">Twitter/X Profile</label>
-                <input type="url" name="twitter" id="twitter" placeholder="https://x.com/username"><br>
-            </div>
-            <button class="generate" onclick="genReadme()">Generate</button>
-        </div>
-        <div class="output-container"></div>
+        <section class="form-container">
+            <form class="form-holder" id="readme-form">
+                <div class="input-group">
+                    <label for="username">👤 Github Username</label>
+                    <input type="text" name="username" id="username" required aria-required="true">
+                </div>
+
+                <div class="input-group">
+                    <label for="animatedText">✨ Animated Text</label>
+                    <input type="text" name="animatedText" id="animatedText" aria-describedby="animated-text-hint">
+                    <small id="animated-text-hint">Use semicolon (;) for line breaks</small>
+                </div>
+
+                <fieldset class="about-me">
+                    <legend>🎯 About me</legend>
+                    <div class="input-group">
+                        <label for="education">🎓 Education</label>
+                        <input type="text" name="education" id="education">
+                    </div>
+                    <div class="input-group">
+                        <label for="goals">🎯 Current Goals</label>
+                        <input type="text" name="goals" id="goals">
+                    </div>
+                    <div class="input-group">
+                        <label for="journey">🚀 Tech Journey</label>
+                        <input type="text" name="journey" id="journey">
+                    </div>
+                </fieldset>
+
+                <div class="input-group">
+                    <label for="techStack">💻 Your tech stack</label>
+                    <input type="text" name="techStack" id="techStack" placeholder="react,svelte,nextjs,androidstudio"
+                        aria-describedby="tech-stack-hint">
+                    <small id="tech-stack-hint">Separate technologies with commas, use lowercase</small>
+                </div>
+
+                <fieldset class="project">
+                    <legend>🛠️ Project Details</legend>
+                    <div class="input-group">
+                        <label for="projTitle">📌 Project Title</label>
+                        <input type="text" name="projTitle" id="projTitle">
+                    </div>
+                    <div class="input-group">
+                        <label for="projStack">⚡ Tech Stack</label>
+                        <input type="text" name="projStack" id="projStack">
+                    </div>
+                    <div class="input-group">
+                        <label for="projDescription">📝 Project Description</label>
+                        <input type="text" name="projDescription" id="projDescription"
+                            placeholder="Use ** ** to bold certain parts of text">
+                    </div>
+                    <div class="input-group">
+                        <label for="projLink">🔗 Project Link</label>
+                        <input type="url" name="projLink" id="projLink" placeholder="GitHub URL">
+                    </div>
+                </fieldset>
+
+                <fieldset class="social-links">
+                    <legend>🌐 Social Links</legend>
+                    <div class="input-group">
+                        <label for="email">📧 Email</label>
+                        <input type="email" name="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="website">🌍 Personal Website</label>
+                        <input type="url" name="website" id="website" placeholder="https://yourwebsite.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="linkedin">💼 LinkedIn URL</label>
+                        <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/username">
+                    </div>
+                    <div class="input-group">
+                        <label for="twitter">✖️ Twitter/X Profile</label>
+                        <input type="url" name="twitter" id="twitter" placeholder="https://x.com/username">
+                    </div>
+                </fieldset>
+
+                <button type="button" class="generate" onclick="genReadme()">✨ Generate README</button>
+            </form>
+        </section>
+        <div class="output-container" aria-live="polite"></div>
     </div>
     <script src="index.js"></script>
 </body>
