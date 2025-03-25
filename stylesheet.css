@@ -5,6 +5,7 @@
     --div-bg: #e6e6e8;
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Roboto', sans-serif;
+    --primary-color: #2563eb;
 }
 
 body {
@@ -13,27 +14,34 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 20px;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .main-container {
     background-color: var(--div-bg);
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
-    /* centering a div ig */
     justify-content: center;
     border: 2px solid;
     border-radius: 20px;
     width: 80%;
+    max-width: 1200px;
     font-family: var(--font-body);
+    overflow: hidden;
+    padding: 20px;
 }
 
-.guidelines {
+.guidelines,
+.form-container {
     margin: 20px;
     background-color: white;
     border: 2px solid;
     border-radius: 12px;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .guidelines p {
@@ -42,20 +50,87 @@ body {
     justify-content: center;
     font-family: var(--font-heading);
     font-weight: 600;
+    margin: 1rem 0;
+}
+
+.form-container {
+    padding: 2rem;
+}
+
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 label {
     font-family: var(--font-heading);
     font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.5rem;
 }
 
 input {
     font-family: var(--font-body);
     font-size: 1rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+input::placeholder {
+    color: #9ca3af;
 }
 
 button.generate {
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: fit-content;
+    margin: 2rem auto 0;
+}
+
+button.generate:hover {
+    background-color: #1d4ed8;
+}
+
+button.generate:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.about-me,
+.project {
+    margin-top: 2rem;
+}
+
+.about-me p,
+.project p {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #111827;
 }
