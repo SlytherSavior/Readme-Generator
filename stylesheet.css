@@ -87,6 +87,7 @@ input {
     border-radius: 6px;
     width: 100%;
     transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
 }
 
 input:focus {
