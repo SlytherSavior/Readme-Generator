@@ -32,3 +32,4 @@ const getGitHubStats = (username) => {
         activity
     };
 };
+

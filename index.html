@@ -16,9 +16,9 @@
                 <li>In Animated Text section, use <b>';'</b> to indicate a line break ( Eg: Hello;World, prints Hello in
                     first line, World in second )</li>
                 <li>In parts such as About section and project descripton, use <b>**Text here**</b> to make it bold</li>
-                <!-- <li></li>
-                <li></li>
-                <li></li> -->
+                <li>For <b>Your tech stack</b> use <b>','</b> to separate names, and write correct names in
+                    <b>lowercase</b>. (Example: tailwind,js,python,java,electron)
+                </li>
             </ul>
         </div>
         <div class="form-container">
@@ -35,6 +35,8 @@
                 <label for="journey">Tech Journey</label>
                 <input type="text" name="journey" id="journey"><br>
             </div>
+            <label for="techStack">Your tech stack</label>
+            <input type="text" name="techStack" id="techStack" placeholder="react,svelte,nextjs,androidstudio">
             <div class="project">
                 <p><b>Enter details about a project below</b></p>
                 <label for="projTitle">Project Title</label>
@@ -45,16 +47,22 @@
                 <input type="text" name="projDescription" id="projDescription"
                     placeholder="Use ** ** to bold certain parts of text"><br>
                 <label for="projLink">Project Link</label>
-                <input type="text" name="projLink" id="projLink" placeholder="GitHub/Live Demo URL"><br>
+                <input type="text" name="projLink" id="projLink" placeholder="GitHub URL"><br>
+
+                <p><b>Social Links</b></p>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="your@email.com"><br>
+                <label for="website">Personal Website</label>
+                <input type="url" name="website" id="website" placeholder="https://yourwebsite.com"><br>
+                <label for="linkedin">LinkedIn URL</label>
+                <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/username"><br>
+                <label for="twitter">Twitter/X Profile</label>
+                <input type="url" name="twitter" id="twitter" placeholder="https://x.com/username"><br>
             </div>
+            <button class="generate" onclick="genReadme()">Generate</button>
         </div>
         <div class="output-container"></div>
     </div>
-
-
-
-
-
     <script src="index.js"></script>
 </body>
 
