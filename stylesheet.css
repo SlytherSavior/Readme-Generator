@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap');
+
 :root {
     --bg-color: #1a1a2e;
     --div-bg: #e6e6e8;
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Roboto', sans-serif;
 }
 
 body {
@@ -22,4 +26,36 @@ body {
     border: 2px solid;
     border-radius: 20px;
     width: 80%;
+    font-family: var(--font-body);
+}
+
+.guidelines {
+    margin: 20px;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.guidelines p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 600;
+}
+
+label {
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+input {
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+button.generate {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
 }
