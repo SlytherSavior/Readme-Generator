@@ -32,6 +32,7 @@ const getGitHubStats = (username) => {
     };
 };
 
+let generate = false;
 function genReadme() {
     const username = document.getElementById('username').value;
     const animatedText = document.getElementById('animatedText').value;
@@ -41,8 +42,8 @@ function genReadme() {
     const techStack = document.getElementById('techStack').value;
     const projTitle = document.getElementById('projTitle').value;
     const projStack = document.getElementById('projStack').value;
-    const projGithub = document.getElementById('projGithub').value;
-    const projDesc = document.getElementById('projDesc').value;
+    const projGithub = document.getElementById('projLink').value;
+    const projDesc = document.getElementById('projDescription').value;
     const email = document.getElementById('email').value;
     const website = document.getElementById('website').value;
     const linkedin = document.getElementById('linkedin').value;
@@ -110,7 +111,16 @@ function genReadme() {
 </p>
 
 ⭐️ *Don't forget to star some repos and drop me a message if you'd like to collaborate!* 🚀🔥
-`
-    
+`;
+    const button = document.getElementById('generate-button')
+    generate = !(generate);
+    if (generate) {
+        button.textContent = "©️ Copy README"
+        navigator.clipboard.writeText(markdownData);
+    } else {
+        button.textContent = "✨ Generate README"
+    }
+
+
 
 };
